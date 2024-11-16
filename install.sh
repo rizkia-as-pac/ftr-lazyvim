@@ -1,7 +1,6 @@
 sudo pacman -S --needed --noconfirm - <./arch-official-packages.txt
 
-sudo mkdir -p $HOME/shell_config_features/ftr-lazyvim
-sudo cp -r ./config.sh $HOME/shell_config_features/ftr-lazyvim/config.sh
+mv ./exclude-config.sh ./config.sh
 
 sudo mkdir -p $HOME/.config/nvim
 sudo cp -r ./lua $HOME/.config/nvim/
