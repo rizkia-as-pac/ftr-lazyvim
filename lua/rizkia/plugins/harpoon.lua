@@ -46,7 +46,7 @@ return {
             results = file_paths,
           }),
           sorter = sorters.get_generic_fuzzy_sorter({}),
-          previewer = previewers.cat.new({}),
+          -- previewer = previewers.cat.new({}),
         })
         :find()
     end
