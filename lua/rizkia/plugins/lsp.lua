@@ -14,6 +14,17 @@ return {
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     local lspconfig = require("lspconfig")
 
+    -- zig language server
+    lspconfig.zls.setup({
+      -- Additional configuration options can be provided for each LSP server by passing arguments to the setup function. See :h lspconfig-setup for details.
+
+      -- For servers not on your $PATH (e.g., jdtls, elixirls), you must manually set the cmd parameter when calling setup().
+      -- karna zls bisa langsung di running menggunakan command `zls` pada terminal sehingga kita tidak perlu set cmd parameter disini.
+      -- You must pass capabilities for each setup {} if you want these to take effect.
+      capabilities = capabilities,
+      -- Do not call setup {} twice for the same server. The second call to setup {} will overwrite the first.
+    })
+
     -- lspconfig.lua_ls.setup({
     --   capabilities = capabilities,
     -- })
